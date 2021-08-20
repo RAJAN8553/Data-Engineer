@@ -1,4 +1,4 @@
-import pymysql
+import pymysql # library for connection between python and mysql
 from datetime import datetime
 
 # database connection
