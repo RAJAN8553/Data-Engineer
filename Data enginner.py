@@ -13,7 +13,7 @@ row = f.readlines()
 
 
 # create function for insert D type of Data
-def insert_record(split_data):
+def insert_record_D(split_data):
     s = "INSERT INTO `" + split_data[9] + "`(`Customer Name`, `Customer ID`, " \
                                     "`Customer Open Date`, `Last Consulted Date`," \
                                     " `Vaccination Type`, `Doctor Consulted`," \
@@ -22,7 +22,7 @@ def insert_record(split_data):
                                     " VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"
     v = split_data[2::1]
     cursor.execute(s, v)
-    print("Record Your Data Successfully. \n Name Of customer ", split_data[2])
+    print("Record Your Data Successfully. \nName Of customer : ", split_data[2])
 
 
 # main program
@@ -49,7 +49,7 @@ for i in range(0, len(row)):
         split[10] = datetime.strptime(split[10], '%m%d%Y')  # format our given date of birth
 
         if flag:
-            insert_record(split)  # call the function
+            insert_record_D(split)  # call the function
 
         else:
             # else it create new country table and store data into new country table
@@ -64,7 +64,7 @@ for i in range(0, len(row)):
                                                           "`Active Customer` CHAR(1) NULL , " \
                                                           "PRIMARY KEY (`Customer Name`)) ;"
             cursor.execute(sql)
-            insert_record(split)  # call the function
+            insert_record_D(split)  # call the function
 
     elif split[1].lower() == 't':  # store T type of data
         sql = "INSERT INTO `test` (`Customer ID`)" \
