@@ -5,7 +5,8 @@ Pre-requirement
 
 2. For connection between Mysql and python you need to import pymysql into your pc using pip install pymysql command on cmd.
 
-3. Before run Data engineer.py code please crate 1 database named as hospital and in that just create 1 table named as "test" only pass Mandatory column.  
+3. Before run Data engineer.py code please crate 1 database named as hospital and in that just create 1 table named as "test" only pass Mandatory column.
+   for that i gave you one **sql file** you just need to import that file into your database and then you ready to go.  
 
 *
 
